@@ -1,0 +1,163 @@
+\documentclass[10pt]{article}
+\usepackage[hmargin=20mm,vmargin=20mm]{geometry}
+\usepackage{amsmath, amsthm, amssymb, mathabx, verbatim, setspace, enumerate}
+\usepackage{relsize}
+\usepackage[mathscr]{euscript}
+\usepackage[all,cmtip]{xy}
+\usepackage{relsize}
+\usepackage[toc,page]{appendix}
+
+\usepackage{tikz-cd}
+
+\xyoption{rotate}
+\xyoption{pdf}
+
+
+\usepackage{tikz-cd}
+
+
+\linespread{1.1}
+
+%prevents underfill for URLs in references
+\usepackage{url}
+\Urlmuskip=0mu plus 1mu\relax
+
+%hyperlinked ToC
+\usepackage{hyperref}
+
+
+
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{lemma}[thm]{Lemma}
+\newtheorem{cor}[thm]{Corollary}
+
+\theoremstyle{definition}
+\newtheorem{exmp}[thm]{Example}
+\newtheorem{defn}[thm]{Definition}
+\newtheorem{rmk}[thm]{Remark}
+\newtheorem{notation}[thm]{Notation}
+\newtheorem{exercise}{Exercise}
+\newtheorem{lem}[thm]{Lemma}
+
+\DeclareMathOperator{\Stab}{Stab}
+\DeclareMathOperator{\Hom}{Hom}
+\newcommand{\colim}{\operatornamewithlimits{colim}}
+\DeclareMathOperator{\Sh}{Sh}
+\DeclareMathOperator{\Pro}{Pro}
+\DeclareMathOperator{\Ind}{Ind}
+\DeclareMathOperator{\Ext}{Ext}
+\DeclareMathOperator{\ch}{ch}
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\Coh}{Coh}
+\DeclareMathOperator{\dmod}{-mod}
+\DeclareMathOperator{\dperf}{-perf}
+\DeclareMathOperator{\Ho}{Ho}
+\DeclareMathOperator{\dcmod}{-cmod}
+\DeclareMathOperator{\Spec}{Spec}
+\DeclareMathOperator{\im}{im}
+\DeclareMathOperator{\gr}{gr}
+\DeclareMathOperator{\Sym}{Sym}
+\DeclareMathOperator{\shHom}{\mathcal{H}\emph{om}}
+\DeclareMathOperator{\shExt}{\mathcal{E}\emph{xt}}
+\DeclareMathOperator{\Mod}{Mod}
+\DeclareMathOperator{\DMod}{DMod}
+\DeclareMathOperator{\pt}{pt}
+\DeclareMathOperator{\defect}{def}
+\DeclareMathOperator{\codim}{codim}
+\DeclareMathOperator{\coker}{coker}
+\DeclareMathOperator{\dR}{dR}
+\DeclareMathOperator{\grr}{gr}
+\DeclareMathOperator{\opp}{op}
+\DeclareMathOperator{\Aff}{Aff}
+\DeclareMathOperator{\Tor}{Tor}
+\DeclareMathOperator{\Der}{Der}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\Res}{Res}
+\DeclareMathOperator{\QCoh}{QCoh}
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\DCoh}{DCoh}
+\DeclareMathOperator{\Perf}{Perf}
+\DeclareMathOperator{\Frac}{Frac}
+\DeclareMathOperator{\IndCoh}{IndCoh}
+\DeclareMathOperator{\Proj}{Proj}
+\DeclareMathOperator{\Rep}{Rep}
+\DeclareMathOperator{\cone}{cone}
+\DeclareMathOperator{\Tot}{Tot}
+\DeclareMathOperator{\ICoh}{ICoh}
+\DeclareMathOperator{\Tate}{Tate}
+\DeclareMathOperator{\Map}{Map}
+\DeclareMathOperator{\Fun}{Fun}
+\DeclareMathOperator{\LMod}{LMod}
+
+
+%Complicated commands
+\newcommand{\leftexp}[2]{{\vphantom{#2}}^{#1}{#2}}
+
+%Sheafy commands
+\newcommand{\sEnd}{\mathcal{E}\emph{nd}}
+
+
+%Shorthand commands
+\newcommand{\dd}{\partial}
+\newcommand{\ra}{\rightarrow}
+\newcommand{\la}{\leftarrow}
+\newcommand{\mf}{\mathfrak}
+\newcommand{\bs}{\backslash}
+\newcommand{\cat}{\mathbf}
+\newcommand{\wh}{\widehat}
+%mathbb
+\newcommand{\PP}{\mathbb{P}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\A}{\mathbb{A}}
+\newcommand{\G}{\mathbb{G}}
+\newcommand{\Q}{\mathbb{Q}}
+%mathcal
+\newcommand{\OO}{\mathcal{O}}
+\newcommand{\DD}{\mathcal{D}}
+\newcommand{\LL}{\mathcal{L}}
+\newcommand{\LLf}{\widehat{\LL}}
+%mathfrak
+\newcommand{\h}{\mf{h}}
+\newcommand{\g}{\mf{g}}
+
+
+
+\DeclareMathOperator{\Aut}{Aut}
+%Typo correction
+\newcommand{\tidle}{\tilde}
+\newcommand{\rightarrw}{\rightarrow}
+\newcommand{\alhpa}{\alpha}
+\newcommand{\rigtarrow}{\rightarrow}
+\newcommand{\emoh}{\emph}
+\newcommand{\codts}{\cdots}
+\newcommand{\shEnd}{\sEnd}
+\newcommand{\rihgtarrow}{\rightarrow}
+
+
+%Markup
+\newcommand{\todo}[1]{\textbf{\textcolor{red}{TODO #1}}}
+
+\newcommand{\loccit}{\emph{loc. cit. }} 
+
+\setcounter{tocdepth}{2}
+
+
+\title{Homework 6, due 10/18}
+\author{Math 6670}
+
+\begin{document}
+\maketitle
+
+\begin{enumerate}
+%\item Vakil 11.1G, 11.1.I, 11.1J, 11.3E; complete the proof that (i) implies (ii) in Vakil Theorem 12.6.4
+\item Let $k$ be a field.  Consider the ``cuspidal $\PP^1$'' $X$ obtained by gluing $\mathbb{A}^1$ and the cuspidal curve $k[x,y]/y^2-x^3$ along $\G_m$.  Show that $X$ has a dualizing sheaf, and identify it.  Define line bundles $\OO_X(n)$ and verify Serre duality for vector bundles by hand.
+\item Let $k$ be a field.  Consider the ``even more cuspidal $\PP^1$'' $X$ obtained by gluing $\mathbb{A}^1$ and $\Spec k[t^2, t^3, t^5]$ along $\G_m$.  Show that $X$ has a dualzing sheaf that is not locally free.  Define line bundles $\OO_X(n)$ and verify Serre duality for vector bundles by hand.
+\item Vakil 18.4E, F
+\item Vakil 18.4M, N, O, P
+\end{enumerate}
+
+\end{document}
