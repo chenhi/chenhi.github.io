@@ -1,0 +1,64 @@
+<html><head><title>Taipei Math Seminar Autoscrape</title><meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
+<script>
+        function displayTimeDifference() {
+            var targetTime = new Date("2024-01-28 23:53");
+            var currentTime = new Date();
+            var timeDifference = currentTime - targetTime;
+
+            var days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+
+            var output = "";
+
+            if (days > 1) {
+                output += "<font color='red'>" + days + " days ago!</font>"
+            } else if (days > 0) {
+                output += days + " days ago";
+            } else if (hours > 0) {
+                output += hours + " hours ago";
+            } else if (minutes > 0) {
+                output += minutes + " minutes ago";
+            } else {
+                output += "just now"
+            }
+
+            document.getElementById("time-difference").innerHTML = output;
+        }
+
+        window.onload = function() {
+            displayTimeDifference();
+        };
+    </script>
+
+</head><body><h1>Taipei Math Seminar Autoscrape ᕕ( ᐛ )ᕗ</h1><h3>
+Last scrape at Asia/Taipei 2024-01-28 23:53 (<p style='display:inline' id='time-difference'></p>)</h3>Scraped <a href='https://www.math.sinica.edu.tw/www/seminar/seminar20_e.jsp'>AS</a>+<a href='https://ncts.ntu.edu.tw/events_list.php?kind=1'>NCTS</a>.  Excludes conferences and courses. Fail count: <font color='green'>0</font><hr>
+<hr><hr>
+<p><b>Taipei Postdoc Seminar</b><br><br><b>Wednesday</b> January 31, 2024, 14:00 to 15:00<br>Room 515, Cosmology Building, NTU<br><br><b>Emile Bouaziz</b> (本所)<br><a href='https://www.math.sinica.edu.tw/www/seminar/abstract_view_e.jsp?seminar_id=5389'>Semi-infinite Non-commutative Invariants</a></p>
+<hr>
+<p><b>Taipei Postdoc Seminar</b><br><br><b>Wednesday</b> January 31, 2024, 14:00 to 15:00<br>Room 515, 
+												Cosmology Building, NTU                                                 
+                                                (臺灣大學次震宇宙館                                                515研討室)<br><br><b>Emile Bouaziz 
+		</b> (Academia Sinica)<br><a href='https://ncts.ntu.edu.tw/events_1_detail.php?nid=2654'>Semi-infinite Non-commutative Invariants</a></p>
+<hr>
+<p><b>Algebraic Geometry Seminar</b><br><br><b>Wednesday</b> January 31, 2024, 15:30 to 17:30<br>online<br><br><b>Saverio Andrea Secci</b> (University of Milan)<br><a href='https://www.math.sinica.edu.tw/www/seminar/abstract_view_e.jsp?seminar_id=5393'>Fano fourfolds with large anticanonical base locus</a></p>
+<hr>
+<p><b>NCTS Seminar in Algebraic Geometry</b><br><br><b>Friday</b> February 02, 2024, 15:30 to 17:00<br>Room 515, Cosmology Building, National Taiwan University + Zoom, 
+												Physical+Online Seminar                                                 
+                                                (實體+線上演講                                                台灣大學次震宇宙館515研討室+ Zoom)<br><br><b>Johan Commelin 
+		</b> (Utrecht University)<br><a href='https://ncts.ntu.edu.tw/events_1_detail.php?nid=2655'>Aspects of the Liquid Tensor Experiment</a></p>
+<hr>
+<hr><hr>
+<p><b>NCTS Seminar on Mathematical Biology</b><br><br><b>Friday</b> February 16, 2024, 10:00 to 11:30<br>Cisco Webex, 
+												Online seminar                                                 
+                                                (線上演講                                                Cisco Webex)<br><br><b>Libin Rong 
+		</b> (University of Florida)<br><a href='https://ncts.ntu.edu.tw/events_1_detail.php?nid=2653'>Recent Advances in Modeling HIV Infection and Treatment</a></p>
+<hr>
+<hr><hr>
+<p><b>NCTS International Geometric Measure Theory Seminar</b><br><br><b>Thursday</b> March 28, 2024, 06:30 to 08:30<br>HyHyve, 
+												Online seminar                                                 
+                                                (線上演講                                                HyHyve)<br><br><b>Richard Bamler 
+		</b> (University of California, Berkeley)<br><a href='https://ncts.ntu.edu.tw/events_1_detail.php?nid=2652'>On the Multiplicity One Conjecture for Mean Curvature Flows of Surfaces</a></p>
+<hr>
+<a href='scrape_seminars.py'>Code</a> written mostly by ChatGPT.
+<hr><a href='index.html'>back to homepage</a></body></html>

@@ -1,0 +1,79 @@
+\documentclass[UTF8,11pt]{article}
+\usepackage[hmargin=20mm,vmargin=20mm]{geometry}                % See geometry.pdf to learn the layout options. There are lots.
+\usepackage{amsmath, amsthm, amssymb, mathabx, verbatim, setspace, enumerate}
+\geometry{letterpaper}                   % ... or a4paper or a5paper or ... 
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{epstopdf}
+%\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+
+\begin{document}
+
+\textbf{HW 1, Math 104} \\
+
+\noindent \textbf{Problem 1}: In this exercise I will ask you to construct the rational numbers and prove it is an ordered field. Define $\mathbb{Q}$ as a \emph{set} as $\mathbb{Z} \times \mathbb{Z}/\sim$, where $\sim$ is the equivalence relation $(p, q) \sim (a, b)$ if there is an integer $n \in \mathbb{Z}$ such that $np = a$ and $nq = b$. \\
+\\
+\textbf{a.} Distinguish an additive and multiplicative identity on this set.  Note that, somewhat confusingly, these elements will actually be equivalence classes, which are sets. \\
+\\
+\textbf{b.} Define the addition operator and multiplication operators on this set.  Define additive and multiplicative inversion. \\
+\\
+\textbf{c.} Show that the operations you have defined satisfy the field axioms. \\
+\\
+\textbf{d.} Define an order on $\mathbb{Q}$.  Show that the order you defined makes $\mathbb{Q}$ into an ordered field (i.e. prove the properties of an ordered field). \\
+\\
+\textbf{e.} Show that there is no rational number $x$ such that $x^2 = 2$, under your construction. \\
+\\
+\\
+\\
+
+\noindent \textbf{Problem 2}: This problem deals with the real numbers. \\
+\\
+\textbf{a.} In class I gave a construction of the real numbers via Dedekind cuts, but I was rather blithe about proving that it satisfies the given axioms. Define all operations, relations, and identity elements in $\mathbb{R}$ and prove it satisfies the properties of an ordered field. \\
+\\
+\textbf{b.} Let $A, B$ be subsets of an ordered field.  Define $A + B = \{a + b \mid a \in A, b \in B\}$ and similarly for $A - B$, $A \cdot B$.  What is $\sup(A + B)$?  $\sup(A - B)$?  Prove your claims. \\
+\\
+\textbf{c.} Define $-A = \{-a \mid a \in A\}$.  Show that $\sup(A) = \inf(-A)$ and $\sup(-A) = \inf(A)$.  Conclude that for ordered fields, the LUB property is equivalent to the GLB propety. \\
+\\
+\textbf{d.} Let $A, B$ be subsets consisting only of positive elements.  Prove that $\sup(A \cdot B) = \sup(A) \sup(B)$.  This is false for general subsets $A, B$: give a counterexample. \\
+\\
+\textbf{e.} Find the infimum of the following subset of $\mathbb{R}$ and prove that it is such: $S = \{ 2^{n} \mid n \in \mathbb{Z}\}$. \\
+
+\newpage
+
+\noindent \textbf{Problem 3}: This problem deals with some miscellaneous topics: indunction, quotients, and metric spaces. \\
+\\
+\textbf{a.} Prove that a $2^n \times 2^n$ chessboard with a single square which may be missing in any position can be covered using L-shaped pieces made of three squares.   \\
+\\
+\textbf{b.} Prove that
+$$\displaystyle \sum_{i=1}^n i^3 = (\displaystyle \sum_{i=1}^n i)^2$$ \\
+\\
+\textbf{c.} Consider the following equivalence relation on $\mathbb{R}$: $x \sim y$ if $x - y \in \mathbb{Z}$.  Describe the set $[\pi]$.  Describe $\mathbb{R}/\sim$. \\
+\\
+\textbf{d.} Consider the following equivalence relation on $\mathbb{R}^2$: $(a, b) \sim (x,y)$ if $2a - b = 2x - y$.  Describe the set $[(0,0)]$.  Describe $\mathbb{R}^2/\sim$ (it might be helpful to draw some equivalence classes).\\
+\\
+\textbf{e.} Describe in completely explicit terms an equivalence relation $E \subset X \times X$ on the set 
+$$X = \{ \text{apple, orange, banana} \}$$
+such that an apple is not equivalent to an orange, and such that the equivalence is nontrivial (i.e. is not the same as equality).  Bonus: use drawings of fruit instead of their words.
+\\
+\\
+\\
+
+\noindent \textbf{Problem 4}: This problem will acquaint you with understanding open and closed sets in metric spaces, and limits of sequences. \\
+\\
+\textbf{a.} Give a collection of open sets $A_1, A_2, A_3, \ldots$ such that:
+$$\bigcap_{i=1}^\infty A_i$$
+is not open.\\
+\\
+\textbf{b.} Give a collection of closed sets $A_1, A_2, A_3, \ldots$ such that:
+$$\bigcup_{i=1}^\infty A_i$$
+is not closed.\\
+\\ 
+\textbf{c.} Consider the subset $A \subset \mathbb{R}$ defined by $A = \{\frac{1}{n} \mid n \in \mathbb{N}\}$.  Is this set open?  Is it closed? \\
+\\
+\textbf{d.} It is not true that the closure of the open ball is the closed ball: $\overline{B_\epsilon(x)} = \overline{B}_\epsilon(x)$.  Give an example of a metric space where this is not true. \\
+\\
+\textbf{e.} Do the following two sequences have a limit?  Prove your claims.  $s_n = \frac{1}{n^2}$.  $t_n = (-\frac{1}{2})^n$.
+
+
+
+\end{document}
