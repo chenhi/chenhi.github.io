@@ -1,0 +1,65 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>Harrison Chen's mathgravesite</title>
+    <style>
+      body {
+        background-image: url('dirtmc.jpg');
+        background-repeat: repeat;
+        background-attachment: fixed;
+        background-position: center;
+      }
+    </style>
+
+</head>
+
+
+<script>
+ function playGif() {        
+  gif_img = document.getElementById('hiddenimage');
+  pour_button = document.getElementById('pourit');
+  if (gif_img.src.endsWith(".gif"))
+  {
+   gif_img.src = gif_img.src.substring(0, gif_img.src.length - 3) + "png";
+   pour_button.innerHTML = "pour one out";
+  } else 
+  {
+   gif_img.src = gif_img.src.substring(0, gif_img.src.length - 3) + "gif";
+   pour_button.innerHTML = "enough beer for you today";
+  }    
+ }
+ 
+ let playing = false;
+  
+ function playMusic(){
+ if(playing==false) {
+  var music = new Audio('boam.mp3');
+  music.loop=true;
+  music.play();
+  playing = true;
+  }
+  }
+</script>
+
+
+<body>
+
+<center><img src="tombstone.jpg" /><br><br>
+ <button type="button" onclick="playGif();playMusic();document.getElementById('papers').hidden=false;document.getElementById('papers2').hidden=false" id="pourit">pour one out</button> 
+
+
+<br><br>
+
+<img src="beer.png" height="500px" id="hiddenimage"/>
+
+<br><br><br>
+
+
+
+<mark hidden=true id="papers">Looking for papers and such?  They're 6 feet under...</mark><br>	
+ <button type="button" onclick="window.open('https://spelunkyworld.com/');document.getElementById('hidden0').hidden=false;document.getElementById('hidden1').hidden=false;document.getElementById('hidden2').hidden=false" hidden=true id="papers2">... but you can try to dig them out!</button> <br><br>
+ 
+<mark hidden=true id="hidden0">You've struck wood.</mark><br> 
+<button type="button" id="hidden1" hidden=true onclick="window.open('https://youtu.be/0g7pwMtNZmg?si=rP8EWBtVIsCw0T_S&t=52')">Smash it with your axe.</button> <button type="button" id="hidden2" hidden=true onclick="window.open('index.html')">Get out your crowbar.</button>
+</center>
+
+
+</body></html>
